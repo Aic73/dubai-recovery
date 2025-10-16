@@ -10,12 +10,18 @@ const nextConfig = {
       },
     },
   },
+  
   images: {
     domains: ['dubairecovery.com'],
     formats: ['image/avif', 'image/webp'],
+    unoptimized: true
   },
   compress: true,
   poweredByHeader: false,
+
+    output: 'export',
+  trailingSlash: true,
+
   headers: async () => [
     {
       source: '/(.*)',
