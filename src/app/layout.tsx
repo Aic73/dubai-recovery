@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
+    google: "19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI",
   },
 }
 
@@ -149,9 +149,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
 
-{/* <meta name="google-site-verification" content="KfdoGOgqJYYpw6_vRtgjF2rHq3Ov46yoNBFbPpOavyU" /> */}
-<meta name="google-site-verification" content="19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI" />
-        <script
+<meta name="google-site-verification" content="19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI" />        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
