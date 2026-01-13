@@ -149,7 +149,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
 
-<meta name="google-site-verification" content="KfdoGOgqJYYpw6_vRtgjF2rHq3Ov46yoNBFbPpOavyU" />
+{/* <meta name="google-site-verification" content="KfdoGOgqJYYpw6_vRtgjF2rHq3Ov46yoNBFbPpOavyU" /> */}
+<meta name="google-site-verification" content="19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
