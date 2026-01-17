@@ -188,8 +188,22 @@ const servicesData = [
   }
 ]
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const service = servicesData.find(s => s.slug === params.slug)
+
+// Next.js 15.5+ requires params as Promise
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+
+
+
+export async function generateMetadata(props: PageProps) {
+  // Await the params Promise
+  const params = await props.params;
+  const { slug } = params;
+  
+  const service = servicesData.find(s => s.slug === slug)
   
   if (!service) {
     return {
@@ -216,8 +230,12 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function ServiceDetail({ params }: { params: { slug: string } }) {
-  const service = servicesData.find(s => s.slug === params.slug)
+export default async function ServiceDetail(props: PageProps) {
+  // Await the params Promise
+  const params = await props.params;
+  const { slug } = params;
+  
+  const service = servicesData.find(s => s.slug === slug)
 
   if (!service) {
     notFound()
@@ -241,6 +259,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
     }
   }
 
+  
   return (
     <>
       <script
