@@ -31,7 +31,7 @@ const updates = [
       },
       {
         from: /https:\/\/CrystalRecovery\.com/g,
-        to: 'https://crystalrecovery.com'
+        to: 'https://www.crystalrecoveryservice.com'
       }
     ]
   },
@@ -40,7 +40,7 @@ const updates = [
     changes: [
       {
         from: /https:\/\/CrystalRecovery\.com/g,
-        to: 'https://crystalrecovery.com'
+        to: 'https://www.crystalrecoveryservice.com'
       }
     ]
   },
