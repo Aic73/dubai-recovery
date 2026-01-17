@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dubairecovery247.com/sitemap.xml
+Sitemap: hhttps://www.crystalrecoveryservice.com/sitemap.xml
 
 # Block AI scrapers (optional)
 User-agent: GPTBot

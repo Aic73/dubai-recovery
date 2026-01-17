@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/'],
+      disallow: ['/api/', '/admin/', '/private/'],
     },
-    sitemap: 'https://crystalrecovery.com/sitemap.xml',
+    sitemap: 'https://www.crystalrecoveryservice.com/sitemap.xml',
+    host: 'https://www.crystalrecoveryservice.com',
   }
 }

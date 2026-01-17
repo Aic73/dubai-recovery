@@ -1,44 +1,85 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://crystalrecovery.com'
+  const baseUrl = 'https://www.crystalrecoveryservice.com'
+  const now = new Date()
   
   return [
+    // Homepage - Highest Priority
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
+      lastModified: now,
+      changeFrequency: 'daily' as const,
       priority: 1,
     },
+    // Service Pages - High Priority
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
+    // Individual Service Pages (MISSING!)
+    {
+      url: `${baseUrl}/services/towing`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/jump-start`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/tire-change`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/fuel-delivery`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/lockout`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/on-spot-repairs`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // Other Important Pages
     {
       url: `${baseUrl}/areas`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
     },
     {
       url: `${baseUrl}/booking`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: now,
+      changeFrequency: 'daily' as const,
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
     },
   ]
 }
