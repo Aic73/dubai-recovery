@@ -25,8 +25,9 @@ import {
   Battery,
   Settings
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, Variants } from 'framer-motion'
 import Link from 'next/link'
+
 
 export default function BookingPage() {
   const router = useRouter()
@@ -248,17 +249,14 @@ try {
     }
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+const itemVariants ={
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } // ✅ Cubic bezier array
   }
+};
 
   const slideInVariants = {
     hidden: { opacity: 0, x: 50 },
@@ -1139,3 +1137,5 @@ try {
     </div>
   )
 }
+
+
