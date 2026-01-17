@@ -19,11 +19,9 @@ module.exports = {
   autoLastmod: true,
   generateIndexSitemap: false,
   outDir: 'public',
-  // Add dynamic routes here
+  
+  // Add dynamic paths
   additionalPaths: async (config) => {
-    const result = []
-    
-    // Service pages
     const services = [
       'towing',
       'jump-start', 
@@ -31,17 +29,32 @@ module.exports = {
       'fuel-delivery',
       'lockout',
       'on-spot-repairs'
-    ]
+    ];
     
-    services.forEach(slug => {
-      result.push({
-        loc: `/services/${slug}`,
+    const paths = services.map(slug => ({
+      loc: `/services/${slug}`,
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    }));
+    
+    // Add other important pages
+    const otherPages = [
+      { loc: '/services', priority: 0.8 },
+      { loc: '/areas', priority: 0.8 },
+      { loc: '/booking', priority: 0.9 },
+      { loc: '/contact', priority: 0.7 },
+      { loc: '/about', priority: 0.5 },
+    ];
+    
+    return [
+      ...paths,
+      ...otherPages.map(page => ({
+        loc: page.loc,
         changefreq: 'weekly',
-        priority: 0.9,
+        priority: page.priority,
         lastmod: new Date().toISOString(),
-      })
-    })
-    
-    return result
+      }))
+    ];
   },
-}
+};
