@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
@@ -186,7 +186,7 @@ export default function Header() {
   
   const pathname = usePathname()
   const lastScrollY = useRef(0)
-  const scrollTimeout = useRef<NodeJS.Timeout>()
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
 
 // In your Header component, simplify the mobile scroll behavior
 useEffect(() => {

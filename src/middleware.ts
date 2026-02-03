@@ -5,13 +5,18 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   
-  // Remove port if present
+  // Get clean hostname without port
   const cleanHostname = hostname.split(':')[0]
   
-  // If accessing without www, redirect to www
-  if (cleanHostname === 'crystalrecoveryservice.com') {
-    url.hostname = 'www.crystalrecoveryservice.com'
-    return NextResponse.redirect(url, 301) // Permanent redirect
+  // Define our canonical domain (prefer www)
+  const canonicalDomain = 'www.crystalrecoveryservice.com'
+  
+  // Only redirect non-www to www
+  // Don't redirect if already on www or localhost
+  if (cleanHostname === 'crystalrecoveryservice.com' && !request.url.includes(canonicalDomain)) {
+    url.hostname = canonicalDomain
+    console.log(`Redirecting ${cleanHostname} to ${canonicalDomain}`)
+    return NextResponse.redirect(url, 301)
   }
   
   return NextResponse.next()
@@ -19,6 +24,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+    // Match all paths except:
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|_vercel).*)',
   ],
 }

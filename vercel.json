@@ -3,17 +3,14 @@
   "outputDirectory": ".next",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://www.crystalrecoveryservice.com/:path*",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "rewrites": [
     {
       "source": "/:path*",
       "destination": "/:path*"
     }
-  ]
+  ],
+  "headers": [],
+  "cleanUrls": true,
+  "trailingSlash": false
 }

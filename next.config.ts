@@ -1,58 +1,37 @@
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: {
-    domains: ['www.crystalrecoveryservice.com'],
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-  },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  async headers() {
+  async redirects() {
     return [
       {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
+        source: '/services',
+        destination: '/services',
+        permanent: true,
       },
       {
-        source: '/sitemap.xml',
-        headers: [
-          {
-            key: 'Content-Type',
-            value: 'application/xml; charset=utf-8',
-          },
-        ],
+        source: '/contact',
+        destination: '/contact', 
+        permanent: true,
       },
-    ];
+      {
+        source: '/booking',
+        destination: '/booking',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/areas',
+        destination: '/areas',
+        permanent: true,
+      },
+      // Service pages
+      {
+        source: '/services/:slug',
+        destination: '/services/:slug',
+        permanent: true,
+      },
+    ]
   },
 }
-
-export default nextConfig
