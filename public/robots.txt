@@ -1,6 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
-
-# Updated: 2026-02-04 01:50:54
+Sitemap: https://www.crystalrecoveryservice.com/sitemap2.xml
