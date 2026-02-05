@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '@/lib/seo'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Dubai Recovery 24/7 - Professional Car Recovery Services',
+        alt: 'Crystal Recovery Service - Professional Car Recovery Services',
       },
     ],
   },

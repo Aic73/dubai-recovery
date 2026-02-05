@@ -1,8 +1,8 @@
-export const siteConfig = {
-  name: "Dubai Recovery 24/7",
+﻿export const siteConfig = {
+  name: "Crystal Recovery Service",
   description: "24/7 Car Recovery & Towing Services in Dubai. Fast response, professional service. Emergency jump starts, tire changes, fuel delivery, and lockout service. Call +971 56 344 6682",
-  url: "https://dubairecovery247.com",
-  ogImage: "https://dubairecovery247.com/og-image.jpg",
+  url: "https://www.crystalrecoveryservice.com",
+  ogImage: "https://www.crystalrecoveryservice.com/og-image.jpg",
   links: {
     twitter: "",
     github: "",
@@ -44,12 +44,12 @@ export const siteConfig = {
   ],
   authors: [
     {
-      name: "Dubai Recovery 24/7",
-      url: "https://dubairecovery247.com",
+      name: "Crystal Recovery Service",
+      url: "https://www.crystalrecoveryservice.com",
     }
   ],
-  creator: "Dubai Recovery 24/7",
-  publisher: "Dubai Recovery 24/7",
+  creator: "Crystal Recovery Service",
+  publisher: "Crystal Recovery Service",
   formatDetection: {
     email: false,
     address: false,
@@ -58,6 +58,7 @@ export const siteConfig = {
 }
 
 export type SiteConfig = typeof siteConfig
+
 
 
 
