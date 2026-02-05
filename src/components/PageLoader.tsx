@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useState } from 'react'
 import { Car, Phone, MapPin, Clock } from 'lucide-react'
@@ -45,7 +45,7 @@ export default function PageLoader() {
               <Car className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold mb-2">Dubai Recovery</h1>
+          <h1 className="text-3xl font-bold mb-2">Crystal Recovery Service</h1>
           <p className="text-blue-200 text-lg">24/7 Emergency Service</p>
         </div>
 
