@@ -1,6 +1,4 @@
-﻿# Crystal Recovery Service Dubai - Robots.txt
-
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
+Sitemap: https://www.crystalrecoveryservice.com/sitemap-new.xml
