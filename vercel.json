@@ -2,15 +2,5 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "redirects": [],
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/:path*"
-    }
-  ],
-  "headers": [],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "installCommand": "npm install"
 }
