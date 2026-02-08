@@ -1,0 +1,57 @@
+﻿{
+    "name":  "crystal-recovery-service",
+    "version":  "1.0.0",
+    "description":  "Professional 24/7 car recovery and towing services in Dubai. Emergency roadside assistance, vehicle towing, jump start, tire change, and fuel delivery across all Dubai areas.",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev --turbopack",
+                    "dev-mobile":  "next dev --turbopack --hostname 0.0.0.0",
+                    "build":  "next build",
+                    "postbuild":  "echo \u0027Build complete\u0027",
+                    "start":  "next start",
+                    "lint":  "next lint",
+                    "export":  "next export",
+                    "deploy":  "npm run build \u0026\u0026 npm run export \u0026\u0026 touch out/.nojekyll \u0026\u0026 gh-pages -d out",
+                    "sitemap":  "next-sitemap"
+                },
+    "dependencies":  {
+                         "@hookform/resolvers":  "^5.2.2",
+                         "@vercel/analytics":  "^1.5.0",
+                         "@vercel/speed-insights":  "^1.1.0",
+                         "clsx":  "^2.1.1",
+                         "framer-motion":  "^12.23.22",
+                         "lucide-react":  "^0.544.0",
+                         "next":  "^15.5.9",
+                         "next-sitemap":  "^4.2.3",
+                         "nodemailer":  "^7.0.9",
+                         "react":  "^19.2.3",
+                         "react-dom":  "^19.2.3",
+                         "react-hook-form":  "^7.63.0",
+                         "swiper":  "^12.0.2",
+                         "tailwind-merge":  "^3.3.1",
+                         "zod":  "^4.1.11"
+                     },
+    "devDependencies":  {
+                            "@eslint/eslintrc":  "^3",
+                            "@tailwindcss/postcss":  "^4",
+                            "@types/node":  "^20",
+                            "@types/nodemailer":  "^7.0.2",
+                            "@types/react":  "^19",
+                            "@types/react-dom":  "^19",
+                            "eslint":  "^9",
+                            "eslint-config-next":  "^16.1.1",
+                            "gh-pages":  "^6.3.0",
+                            "postcss":  "^8",
+                            "tailwindcss":  "^4",
+                            "typescript":  "^5"
+                        },
+    "keywords":  [
+                     "car recovery dubai",
+                     "towing service dubai",
+                     "24/7 roadside assistance",
+                     "emergency car recovery",
+                     "vehicle towing dubai"
+                 ],
+    "author":  "Crystal Recovery Service 24/7 \u003cinfo@crystalrecovery.com\u003e",
+    "license":  "MIT"
+}
