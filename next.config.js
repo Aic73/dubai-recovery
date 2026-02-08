@@ -1,14 +1,9 @@
-{import('next').NextConfig}
+﻿/** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: "export",
   images: {
     unoptimized: true
-  },
-  // No redirects - they were causing issues
-  async redirects() {
-    return []
   }
 }
-
 
 module.exports = nextConfig
