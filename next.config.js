@@ -7,22 +7,12 @@
     NEXT_PUBLIC_SITE_URL: 'https://www.crystalrecoveryservice.com',
   },
   
-  // Redirect /sitemap.xml to our API route
-  async redirects() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/sitemap',
-        permanent: true,
-      },
-    ]
-  },
-  
+  // NO redirects, let static file be served
   // Headers for XML files
   async headers() {
     return [
       {
-        source: '/sitemap',
+        source: '/sitemap.xml',
         headers: [
           {
             key: 'Content-Type',
@@ -30,7 +20,15 @@
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600',
+            value: 'no-cache, no-store, must-revalidate',
+          },
+          {
+            key: 'Pragma',
+            value: 'no-cache',
+          },
+          {
+            key: 'Expires',
+            value: '0',
           },
         ],
       },

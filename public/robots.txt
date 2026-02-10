@@ -1,5 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
-# Sitemap for Crystal Recovery Service Dubai
-Sitemap: https://www.crystalrecoveryservice.com/sitemap
+# Static sitemap - Crystal Recovery Service Dubai
+Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
