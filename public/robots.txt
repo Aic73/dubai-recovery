@@ -3,5 +3,5 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-# Static sitemap - Crystal Recovery Service Dubai
-Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
+# Use HTTP until SSL is fixed
+Sitemap: http://www.crystalrecoveryservice.com/sitemap.xml
