@@ -1,0 +1,49 @@
+﻿# SSL CERTIFICATE TROUBLESHOOTING GUIDE
+# For: www.crystalrecoveryservice.com
+
+## CURRENT ISSUE
+GitHub Pages is provisioning SSL certificate for your custom domain.
+This can take 24-48 hours.
+
+## TEMPORARY SOLUTIONS
+
+### 1. Use HTTP instead of HTTPS (Recommended)
+- Use: http://www.crystalrecoveryservice.com/
+- Works immediately
+- No security warnings
+- GitHub will redirect to HTTPS when ready
+
+### 2. Instruct users to bypass warning
+Tell customers:
+1. Click "Advanced" on the warning page
+2. Click "Proceed to www.crystalrecoveryservice.com (unsafe)"
+3. The site is actually safe - it's just certificate provisioning
+
+### 3. Check GitHub Pages SSL status
+1. Go to: https://github.com/Aic73/crystal-recovery-service/settings/pages
+2. Look for "Custom domain" section
+3. Wait for "Your site is ready to be secured with HTTPS"
+4. Check "Enforce HTTPS" when available
+
+## EXPECTED TIMELINE
+- 0-1 hours: DNS propagation
+- 1-24 hours: GitHub detects custom domain
+- 24-48 hours: SSL certificate provisioned
+- After 48 hours: HTTPS works automatically
+
+## VERIFICATION STEPS
+1. Wait 24 hours
+2. Visit: https://www.crystalrecoveryservice.com/
+3. If no warning, SSL is working
+4. If warning, wait longer
+
+## ALTERNATIVE: USE CLOUDFLARE (Advanced)
+If SSL doesn't work after 48 hours:
+1. Sign up at Cloudflare.com (free)
+2. Add your domain
+3. Change nameservers to Cloudflare's
+4. Cloudflare provides free SSL
+
+## FOR NOW
+Use: http://www.crystalrecoveryservice.com/
+It's safe and works immediately.

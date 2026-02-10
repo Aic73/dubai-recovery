@@ -1,6 +1,6 @@
 ﻿{
-    "outputDirectory":  ".next",
-    "buildCommand":  "npm run build",
-    "devCommand":  "next dev",
-    "installCommand":  "npm install"
+  "buildCommand": "echo \"Using static site from docs/\" && cp -r docs/* public/ 2>/dev/null || copy docs\\* public\\",
+  "outputDirectory": "public",
+  "devCommand": "echo \"Static site - no dev server needed\"",
+  "installCommand": "npm install"
 }

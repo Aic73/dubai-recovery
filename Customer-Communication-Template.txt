@@ -1,0 +1,38 @@
+﻿# CRYSTAL RECOVERY SERVICE - CUSTOMER COMMUNICATION
+
+## TEMPORARY WEBSITE ACCESS
+
+Due to technical SSL certificate provisioning (automatic process), our main domain is temporarily redirecting. Please use this URL:
+
+🌐 **TEMPORARY URL**: https://aic73.github.io/crystal-recovery-service/
+
+This URL works perfectly with:
+✅ Full SSL security
+✅ All business information
+✅ Mobile responsive design
+✅ 24/7 accessibility
+
+## CONTACT INFORMATION (ALWAYS ACTIVE)
+📞 **24/7 Emergency**: +971 56 344 6682
+📧 **Email**: info@crystalrecoveryservice.com
+
+## OUR SERVICES
+• Vehicle Towing
+• Jump Start Service
+• Tire Change
+• Fuel Delivery
+• Lockout Service
+• Roadside Assistance
+• Serving All Dubai Areas
+
+## EXPECTED RESOLUTION
+Our main domain (www.crystalrecoveryservice.com) will be fully operational with SSL within 24 hours. This is an automatic process by GitHub Pages.
+
+## FOR CUSTOMERS
+If you visit our main domain and see a redirect warning:
+1. Use the temporary URL above
+2. OR wait 24 hours for automatic fix
+3. Our phone and email work 24/7 regardless
+
+Thank you for your understanding!
+- Crystal Recovery Service Dubai Team
