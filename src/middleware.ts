@@ -1,4 +1,4 @@
-﻿import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
@@ -9,11 +9,11 @@ export function middleware(request: NextRequest) {
   const cleanHostname = hostname.split(':')[0]
   
   // Define our canonical domain (prefer www)
-  const canonicalDomain = 'www.crystalrecoveryservice.com'
+  const canonicalDomain = 'www.Crystal Recovery Serviceservice.com'
   
   // Only redirect non-www to www
   // Don't redirect if already on www or localhost
-  if (cleanHostname === 'crystalrecoveryservice.com' && !request.url.includes(canonicalDomain)) {
+  if (cleanHostname === 'Crystal Recovery Serviceservice.com' && !request.url.includes(canonicalDomain)) {
     url.hostname = canonicalDomain
     console.log(`Redirecting ${cleanHostname} to ${canonicalDomain}`)
     return NextResponse.redirect(url, 301)
@@ -28,3 +28,4 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|_vercel).*)',
   ],
 }
+

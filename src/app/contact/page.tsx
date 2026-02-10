@@ -35,8 +35,8 @@ const contactMethods = [
     icon: <Mail className="w-6 h-6" />,
     title: "Email Us",
     description: "General inquiries",
-    details: "info@CrystalRecovery.com",
-    link: "mailto:info@CrystalRecovery.com",
+details: "info@Crystal Recovery Serviceservice.com",
+link: "mailto:info@Crystal Recovery Serviceservice.com",
     color: "from-blue-500 to-blue-600",
     emergency: false
   },

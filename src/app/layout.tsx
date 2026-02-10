@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '@/lib/seo'
@@ -7,8 +7,8 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
-  preload: false, // â¬…ï¸ ADD THIS LINE - Prevents build-time fetch
-  fallback: ['system-ui', 'arial'] // â¬…ï¸ ADD THIS LINE - Fallback fonts
+  preload: false, // ⬅️ ADD THIS LINE - Prevents build-time fetch
+  fallback: ['system-ui', 'arial'] // ⬅️ ADD THIS LINE - Fallback fonts
 })
 
 const poppins = Poppins({
@@ -16,12 +16,12 @@ const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   display: 'swap',
-  preload: false, // â¬…ï¸ ADD THIS LINE
-  fallback: ['system-ui', 'arial'] // â¬…ï¸ ADD THIS LINE
+  preload: false, // ⬅️ ADD THIS LINE
+  fallback: ['system-ui', 'arial'] // ⬅️ ADD THIS LINE
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.crystalrecoveryservice.com'),
+  metadataBase: new URL('https://www.Crystal Recovery Serviceservice.com'),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -126,7 +126,7 @@ export default function RootLayout({
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: '+971-56-344-6682',
-    email: 'info@CrystalRecovery.com',
+    email: 'info@Crystal Recovery Serviceservice.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Dubai',
@@ -167,3 +167,4 @@ export default function RootLayout({
     </html>
   )
 }
+

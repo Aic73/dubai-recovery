@@ -131,10 +131,10 @@ export default function Footer() {
                 <div>
                   <p className="text-sm text-gray-300">Email Us</p>
                   <a 
-                    href="mailto:info@CrystalRecovery247.com" 
+                    href="mailto:info@Crystal Recovery Service247.com" 
                     className="text-white font-semibold hover:text-blue-400 transition-colors text-sm"
                   >
-                    info@CrystalRecovery247.com
+                    info@Crystal Recovery Service247.com
                   </a>
                 </div>
               </div>

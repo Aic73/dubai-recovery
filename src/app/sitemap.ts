@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // ❌ WRONG - This is the old domain!
-  // const baseUrl = 'https://crystalrecovery.com'
+  // const baseUrl = 'https://Crystal Recovery Serviceservice.com'
   
   // ✅ CORRECT - Use your actual domain!
-  const baseUrl = 'https://www.crystalrecoveryservice.com'
+  const baseUrl = 'https://www.Crystal Recovery Serviceservice.com'
   
   return [
     {

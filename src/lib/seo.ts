@@ -1,8 +1,8 @@
-﻿export const siteConfig = {
+export const siteConfig = {
   name: "Crystal Recovery Service",
   description: "24/7 Car Recovery & Towing Services in Dubai. Fast response, professional service. Emergency jump starts, tire changes, fuel delivery, and lockout service. Call +971 56 344 6682",
-  url: "https://www.crystalrecoveryservice.com",
-  ogImage: "https://www.crystalrecoveryservice.com/og-image.jpg",
+  url: "https://www.Crystal Recovery Serviceservice.com",
+  ogImage: "https://www.Crystal Recovery Serviceservice.com/og-image.jpg",
   links: {
     twitter: "",
     github: "",
@@ -45,7 +45,7 @@
   authors: [
     {
       name: "Crystal Recovery Service",
-      url: "https://www.crystalrecoveryservice.com",
+      url: "https://www.Crystal Recovery Serviceservice.com",
     }
   ],
   creator: "Crystal Recovery Service",
@@ -58,6 +58,7 @@
 }
 
 export type SiteConfig = typeof siteConfig
+
 
 
 

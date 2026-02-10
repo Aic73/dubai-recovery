@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "🚨 Emergency car recovery service in Dubai. 24/7 towing, jump start, tire change, fuel delivery. Fast response within 30 minutes. Call +971 56 344 6682 now!",
   keywords: "car recovery dubai, towing service dubai, 24/7 breakdown service, emergency car recovery, dubai towing, roadside assistance dubai",
   alternates: {
-    canonical: 'https://www.crystalrecoveryservice.com',
+    canonical: 'https://www.Crystal Recovery Serviceservice.com',
   },
   openGraph: {
     title: "24/7 Car Recovery Dubai | Emergency Towing & Roadside Assistance",
@@ -49,7 +49,7 @@ const structuredData = {
   '@type': 'AutoRepair',
   name: 'Crystal Recovery Service 24/7',
   description: '24/7 Emergency car recovery and roadside assistance services in Dubai',
-  url: 'https://www.crystalrecoveryservice.com',
+  url: 'https://www.Crystal Recovery Serviceservice.com',
   telephone: '+971-56-344-6682',
   address: {
     '@type': 'PostalAddress',
