@@ -1,0 +1,11 @@
+﻿# SITEMAP LOCK FILE
+# This sitemap is MANUALLY controlled
+# DO NOT use next-sitemap or any auto-generator
+# Domain: https://www.crystalrecoveryservice.com
+# Last updated: 2026-02-10 20:51:04
+# Contact: info@crystalrecoveryservice.com
+
+MANUAL_SITEMAP=true
+DOMAIN=https://www.crystalrecoveryservice.com
+SITEMAP_FILE=public/sitemap.xml
+GENERATOR=manual-generate-sitemap.js
