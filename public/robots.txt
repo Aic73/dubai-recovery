@@ -1,19 +1,4 @@
-﻿# Crystal Recovery Service Dubai
-# MANUAL CONTROL - DO NOT AUTO-GENERATE
-
 User-agent: *
 Allow: /
 
-# Directives
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-Crawl-delay: 1
-
-# PRIMARY SITEMAPS - MANUAL
 Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
-Sitemap: https://www.crystalrecoveryservice.com/sitemap.html
-
-# Contact
-# Email: info@crystalrecoveryservice.com
-# Phone: +971 56 344 6682
