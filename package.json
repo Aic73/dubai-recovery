@@ -6,7 +6,7 @@
     "scripts":  {
                     "dev":  "next dev --turbopack",
                     "dev-mobile":  "next dev --turbopack --hostname 0.0.0.0",
-                    "build":  "next build \u0026\u0026 node generate-sitemap.js",
+                    "build":  "next build \u0026\u0026 node verify-build.js",
                     "postbuild":  "node generate-sitemap.js",
                     "start":  "next start",
                     "lint":  "next lint",

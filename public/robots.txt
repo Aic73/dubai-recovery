@@ -1,6 +1,5 @@
 ﻿# Crystal Recovery Service Dubai
-# MANUAL robots.txt - DO NOT AUTO-GENERATE
-# Domain: https://www.crystalrecoveryservice.com
+# MANUAL CONTROL - DO NOT AUTO-GENERATE
 
 User-agent: *
 Allow: /
@@ -11,9 +10,10 @@ Disallow: /admin/
 Disallow: /private/
 Crawl-delay: 1
 
-# MANUAL SITEMAP - DO NOT CHANGE
+# PRIMARY SITEMAPS - MANUAL
 Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
+Sitemap: https://www.crystalrecoveryservice.com/sitemap.html
 
 # Contact
-# For crawling issues: info@crystalrecoveryservice.com
+# Email: info@crystalrecoveryservice.com
 # Phone: +971 56 344 6682

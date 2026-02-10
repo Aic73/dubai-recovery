@@ -1,0 +1,14 @@
+﻿# Crystal Recovery Service Dubai - Manual Redirects
+# https://www.crystalrecoveryservice.com
+
+# Redirect wrong sitemap requests
+/sitemap-old.xml  /sitemap.xml  301
+/sitemap-new.xml  /sitemap.xml  301
+/sitemap.html     /sitemap.xml  301
+
+# Ensure sitemap is accessible
+/sitemap.xml  /sitemap.xml  200
+
+# Redirect any potential wrong domain requests
+https://crystalrecovery.com/*  https://www.crystalrecoveryservice.com/:splat  301
+https://dubairecovery247.com/* https://www.crystalrecoveryservice.com/:splat  301
