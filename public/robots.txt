@@ -1,5 +1,17 @@
-﻿User-agent: *
+﻿# Crystal Recovery Service Dubai - Robots.txt
+# https://www.crystalrecoveryservice.com/
+
+User-agent: *
 Allow: /
 
-# Sitemap for Crystal Recovery Service Dubai
+# Directives
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
+
+# Contact for crawling issues
+# Contact: info@crystalrecoveryservice.com
