@@ -1,5 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-# GitHub Pages sitemap (WORKING with SSL)
 Sitemap: https://aic73.github.io/crystal-recovery-service/sitemap.xml
