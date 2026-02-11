@@ -1,4 +1,5 @@
-﻿$nextConfig = module.exports = {
+﻿/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "standalone",
   images: {
     unoptimized: true
@@ -7,7 +8,6 @@
     NEXT_PUBLIC_SITE_URL: 'https://www.crystalrecoveryservice.com',
   },
   
-  // NO redirects, let static file be served
   // Headers for XML files
   async headers() {
     return [
@@ -22,16 +22,12 @@
             key: 'Cache-Control',
             value: 'no-cache, no-store, must-revalidate',
           },
-          {
-            key: 'Pragma',
-            value: 'no-cache',
-          },
-          {
-            key: 'Expires',
-            value: '0',
-          },
         ],
       },
     ]
   },
 }
+
+module.exports = nextConfig
+
+
