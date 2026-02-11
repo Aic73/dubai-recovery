@@ -8,7 +8,16 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: 'https://www.crystalrecoveryservice.com',
   },
   
-  // Headers for XML files
+  // FORCE static files to be served
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/sitemap.xml',
+      },
+    ]
+  },
+  
   async headers() {
     return [
       {
