@@ -1,6 +1,7 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 
+Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
 Sitemap: https://www.crystalrecoveryservice.com/sitemap-final.xml
