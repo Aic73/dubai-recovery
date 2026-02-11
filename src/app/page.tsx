@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+﻿import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import HeroSection from '@/components/HeroSection'
 // import { WhyChooseSection, ServiceAreasSection } from '@/components/WhyChooseSection, @/components/ServiceAreasSection'
@@ -22,7 +22,7 @@ import {
 
 export const metadata: Metadata = {
   title: "24/7 Car Recovery Dubai | Fast Towing & Breakdown Service | +971 56 344 6682",
-  description: "🚨 Emergency car recovery service in Dubai. 24/7 towing, jump start, tire change, fuel delivery. Fast response within 30 minutes. Call +971 56 344 6682 now!",
+  description: "ðŸš¨ Emergency car recovery service in Dubai. 24/7 towing, jump start, tire change, fuel delivery. Fast response within 30 minutes. Call +971 56 344 6682 now!",
   keywords: "car recovery dubai, towing service dubai, 24/7 breakdown service, emergency car recovery, dubai towing, roadside assistance dubai",
   alternates: {
     canonical: 'https://www.Crystal Recovery Serviceservice.com',
@@ -182,7 +182,7 @@ const testimonials = [
     service: "Car Towing Service",
     rating: 5,
     comment: "Amazing service! They reached me in 25 minutes at 2 AM and towed my car safely to the garage. Highly professional and fast response.",
-    avatar: "👨‍💼",
+    avatar: "ðŸ‘¨â€ðŸ’¼",
     date: "2024-01-15"
   },
   {
@@ -191,7 +191,7 @@ const testimonials = [
     service: "Jump Start Service",
     rating: 5,
     comment: "My car battery died during peak hours near Dubai Marina. They arrived in 20 minutes and got me back on the road. Excellent service!",
-    avatar: "👩‍💼",
+    avatar: "ðŸ‘©â€ðŸ’¼",
     date: "2024-01-12"
   },
   {
@@ -200,7 +200,7 @@ const testimonials = [
     service: "Tire Change Service",
     rating: 5,
     comment: "Got a flat tire on Sheikh Zayed Road during rush hour. Crystal Recovery Service came quickly and changed the tire professionally. Fair pricing and great service!",
-    avatar: "👨‍🔧",
+    avatar: "ðŸ‘¨â€ðŸ”§",
     date: "2024-01-10"
   }
 ]
@@ -448,10 +448,10 @@ export default function Home() {
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
         {[
-          { number: "98%", label: "Satisfaction Rate", color: "text-blue-600", icon: "😊" },
-          { number: "24/7", label: "Service Available", color: "text-green-600", icon: "🕒" },
-          { number: "4.9/5", label: "Google Rating", color: "text-yellow-600", icon: "⭐" },
-          { number: "10K+", label: "Happy Customers", color: "text-purple-600", icon: "👥" }
+          { number: "98%", label: "Satisfaction Rate", color: "text-blue-600", icon: "ðŸ˜Š" },
+          { number: "24/7", label: "Service Available", color: "text-green-600", icon: "ðŸ•’" },
+          { number: "4.9/5", label: "Google Rating", color: "text-yellow-600", icon: "â­" },
+          { number: "10K+", label: "Happy Customers", color: "text-purple-600", icon: "ðŸ‘¥" }
         ].map((stat, index) => (
           <div 
             key={index}
@@ -688,3 +688,4 @@ export default function Home() {
     </>
   )
 }
+

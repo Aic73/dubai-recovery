@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+﻿import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -221,7 +221,7 @@ export default function ServicesPage() {
                   className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-3 shadow-2xl"
                 >
                   <Phone className="w-6 h-6" />
-                  <span>🚨 EMERGENCY CALL: +971 56 344 6682</span>
+                  <span>ðŸš¨ EMERGENCY CALL: +971 56 344 6682</span>
                 </a>
                 <Link 
                   href="/booking" 
@@ -444,7 +444,7 @@ export default function ServicesPage() {
                 className="bg-white text-red-500 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-3"
               >
                 <Phone className="w-6 h-6" />
-                <span>🚨 CALL +971 56 344 6682</span>
+                <span>ðŸš¨ CALL +971 56 344 6682</span>
               </a>
               <Link 
                 href="/booking" 
