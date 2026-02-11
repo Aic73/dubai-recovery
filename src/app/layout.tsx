@@ -21,7 +21,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.Crystal Recovery Serviceservice.com'),
+metadataBase: new URL('https://www.crystalrecoveryservice.com'),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
