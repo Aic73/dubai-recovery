@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+﻿import type { Metadata, Viewport } from 'next'
 const inter = { className: 'font-sans' }
 const poppins = { className: 'font-sans' }
 import './globals.css'
@@ -8,8 +8,8 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
-  preload: false, // ⬅️ ADD THIS LINE - Prevents build-time fetch
-  fallback: ['system-ui', 'arial'] // ⬅️ ADD THIS LINE - Fallback fonts
+  preload: false, // â¬…ï¸ ADD THIS LINE - Prevents build-time fetch
+  fallback: ['system-ui', 'arial'] // â¬…ï¸ ADD THIS LINE - Fallback fonts
 })
 
 const poppins = Poppins({
@@ -17,8 +17,8 @@ const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
   display: 'swap',
-  preload: false, // ⬅️ ADD THIS LINE
-  fallback: ['system-ui', 'arial'] // ⬅️ ADD THIS LINE
+  preload: false, // â¬…ï¸ ADD THIS LINE
+  fallback: ['system-ui', 'arial'] // â¬…ï¸ ADD THIS LINE
 })
 
 export const metadata: Metadata = {
@@ -168,5 +168,6 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 

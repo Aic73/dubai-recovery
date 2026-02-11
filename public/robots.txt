@@ -3,5 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-# Use HTTP until SSL is fixed
-Sitemap: http://www.crystalrecoveryservice.com/sitemap.xml
+Sitemap: https://www.crystalrecoveryservice.com/sitemap.xml
