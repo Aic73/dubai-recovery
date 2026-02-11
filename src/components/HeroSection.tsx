@@ -45,6 +45,7 @@ const defaultSlides: Slide[] = [
     id: 3,
     image: "/images/hero/slide-3.webp",
     mobileImage: "/images/hero/slide-3-mobile.webp",
+    alt: "Roadside assistance in Dubai - jump starts, tire changes, fuel delivery",
     title: "Roadside Assistance Experts",
     description: "Jump starts, tire changes, fuel delivery"
   },
@@ -52,7 +53,7 @@ const defaultSlides: Slide[] = [
     id: 4,
     image: "/images/hero/slide-4.webp",
     mobileImage: "/images/hero/slide-4-mobile.webp",
-    alt: "Trusted car recovery service with modern equipment in Dubai",
+    alt: "Trusted car recovery service in Dubai with 4.9/5 customer rating",
     title: "Trusted by Thousands",
     description: "4.9/5 customer rating"
   },
@@ -60,7 +61,7 @@ const defaultSlides: Slide[] = [
     id: 5,
     image: "/images/hero/slide-5.webp",
     mobileImage: "/images/hero/slide-5-mobile.webp",
-    alt: "Fast emergency response car recovery service in Dubai",
+    alt: "Fast emergency car recovery service in Dubai with 30-minute response",
     title: "30-Minute Average Response",
     description: "Quick help when you need it most"
   }
@@ -123,17 +124,6 @@ export default function HeroSection({
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* Emergency Alert - Made more responsive */}
-      {/* <div className="absolute top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-20 bg-red-600/90 text-white px-4 py-2 md:px-6 md:py-3 rounded-full backdrop-blur-sm border border-red-400 max-w-[90vw]">
-        <div className="flex items-center space-x-2 md:space-x-3">
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-          <span className="font-semibold text-xs md:text-sm whitespace-nowrap">
-            🚨 24/7 Emergency Service Active
-          </span>
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-        </div>
-      </div> */}
 
       {/* Main Content - Centered without service cards */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
