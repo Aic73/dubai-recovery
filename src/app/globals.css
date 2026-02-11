@@ -1,26 +1,6 @@
-@import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-
-/* Add these lines to your existing globals.css */
 @layer base {
   * {
     -webkit-tap-highlight-color: transparent;
@@ -33,6 +13,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior: none;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -40,12 +21,11 @@
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-      background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  /* Prevent zoom on input focus in iOS */
   input,
   select,
   textarea {
@@ -53,14 +33,22 @@
   }
 }
 
-/* Custom loading animations */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ANIMATIONS - Copy ALL your animation keyframes here */
 @keyframes pulse-glow {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 @keyframes slide-in-right {
@@ -68,21 +56,11 @@
   to { transform: translateX(0); }
 }
 
-.animate-slide-in-right {
-  animation: slide-in-right 0.5s ease-out;
-}
-
-/* Progress bar animation */
 @keyframes progress {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
 
-.animate-progress {
-  animation: progress 1.5s ease-in-out infinite;
-}
-
-/* Testimonials and Emergency Sections Animations */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -95,21 +73,13 @@
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes bounce-gentle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes scale-in {
@@ -134,156 +104,68 @@
   }
 }
 
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 }
 
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+@keyframes emergency-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
 }
 
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
+@keyframes skeleton-loading {
+  0% { background-color: #f3f4f6; }
+  50% { background-color: #e5e7eb; }
+  100% { background-color: #f3f4f6; }
 }
 
 /* Animation Classes */
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
-}
-
-.animate-bounce-gentle {
-  animation: bounce-gentle 2s ease-in-out infinite;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.5s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.6s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.6s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-shimmer {
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-slide-in-right { animation: slide-in-right 0.5s ease-out; }
+.animate-progress { animation: progress 1.5s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+.animate-bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
+.animate-scale-in { animation: scale-in 0.5s ease-out forwards; }
+.animate-slide-in-left { animation: slide-in-left 0.6s ease-out forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-shimmer { 
   animation: shimmer 2s infinite linear;
   background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
   background-size: 1000px 100%;
 }
+.animate-emergency-pulse { animation: emergency-pulse 2s infinite; }
+.animate-skeleton { animation: skeleton-loading 1.5s ease-in-out infinite; }
 
-.animate-typewriter {
-  animation: typewriter 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+/* Delay Classes */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+.animate-delay-800 { animation-delay: 800ms; }
+.animate-delay-900 { animation-delay: 900ms; }
+.animate-delay-1000 { animation-delay: 1000ms; }
 
-/* Staggered Animation Delays */
-.animate-delay-100 {
-  animation-delay: 100ms;
-}
-
-.animate-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animate-delay-300 {
-  animation-delay: 300ms;
-}
-
-.animate-delay-400 {
-  animation-delay: 400ms;
-}
-
-.animate-delay-500 {
-  animation-delay: 500ms;
-}
-
-.animate-delay-600 {
-  animation-delay: 600ms;
-}
-
-.animate-delay-700 {
-  animation-delay: 700ms;
-}
-
-.animate-delay-800 {
-  animation-delay: 800ms;
-}
-
-.animate-delay-900 {
-  animation-delay: 900ms;
-}
-
-.animate-delay-1000 {
-  animation-delay: 1000ms;
-}
-
-/* Mobile Slider Styles */
+/* Utility Classes */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
+.snap-x { scroll-snap-type: x mandatory; }
+.snap-center { scroll-snap-align: center; }
+.snap-mandatory { scroll-snap-stop: always; }
 
-.snap-x {
-  scroll-snap-type: x mandatory;
-}
-
-.snap-center {
-  scroll-snap-align: center;
-}
-
-.snap-mandatory {
-  scroll-snap-stop: always;
-}
-
-/* Glass Morphism Effects */
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -296,206 +178,41 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Emergency Pulse Effect */
-@keyframes emergency-pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
-  }
-}
-
-.animate-emergency-pulse {
-  animation: emergency-pulse 2s infinite;
-}
-
-/* Gradient Text Animation */
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient-shift {
-  background: linear-gradient(-45deg, #ef4444, #f59e0b, #3b82f6, #8b5cf6);
-  background-size: 400% 400%;
-  animation: gradient-shift 3s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Hover Effects */
 .hover-lift {
   transition: all 0.3s ease;
 }
-
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.hover-glow:hover {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-}
-
-/* Mobile Optimized Touch Targets */
 .touch-target {
   min-height: 44px;
   min-width: 44px;
 }
 
-/* Loading Skeleton Animation */
-@keyframes skeleton-loading {
-  0% {
-    background-color: #f3f4f6;
-  }
-  50% {
-    background-color: #e5e7eb;
-  }
-  100% {
-    background-color: #f3f4f6;
-  }
-}
-
-.animate-skeleton {
-  animation: skeleton-loading 1.5s ease-in-out infinite;
-}
-
-/* Custom Scrollbar for Webkit */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 10px;
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
 
-/* Focus States for Accessibility */
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
+/* Mobile Container */
+.mobile-container { @apply px-4; }
+.tablet-container { @apply px-6; }
+.desktop-container { @apply px-8; }
 
-/* Print Styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  .print-break-after {
-    page-break-after: always;
-  }
-}
-
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* High Contrast Mode Support */
-@media (prefers-contrast: high) {
-  .glass {
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid currentColor;
-  }
-}
-
-/* Dark Mode Enhancements */
-@media (prefers-color-scheme: dark) {
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: #374151;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #6b7280;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #9ca3af;
-  }
-}
-
-/* Mobile First Responsive Helpers */
-.mobile-container {
-  @apply px-4;
-}
-
-.tablet-container {
-  @apply px-6;
-}
-
-.desktop-container {
-  @apply px-8;
-}
-
-/* Utility Classes for the New Sections */
-.testimonial-card {
-  @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
-}
-
-.emergency-card {
-  @apply bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-2xl p-8 shadow-2xl;
-}
-
-.trust-stat {
-  @apply text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300;
-}
-
-/* Background Pattern Utilities */
-.bg-dots {
-  background-image: radial-gradient(currentColor 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.bg-grid {
-  background-image: 
-    linear-gradient(currentColor 1px, transparent 1px),
-    linear-gradient(90deg, currentColor 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Ensure smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection Colors */
+/* Selection */
 ::selection {
   background-color: #3b82f6;
   color: white;
 }
-
-::-moz-selection {
-  background-color: #3b82f6;
-  color: white;
-}     
