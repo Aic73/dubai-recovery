@@ -1,6 +1,5 @@
 ﻿import type { Metadata, Viewport } from 'next'
-const inter = { className: 'font-sans' }
-const poppins = { className: 'font-sans' }
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '@/lib/seo'
 import { LoadingProvider } from '@/contexts/LoadingContext'

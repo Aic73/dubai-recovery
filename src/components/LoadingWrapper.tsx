@@ -1,5 +1,4 @@
 'use client'
-
 import { useLoading } from '@/contexts/LoadingContext'
 import PageLoader from './PageLoader'
 
