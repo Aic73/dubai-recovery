@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   title: "Service Areas Dubai | Car Recovery Coverage Across All Dubai Areas | +971 56 344 6682",
   description: "24/7 car recovery service covering all Dubai areas: Downtown, Marina, Jumeirah, Deira, Bur Dubai, Palm Jumeirah & more. Fast response within 30 minutes.",
   keywords: "dubai areas covered, car recovery near me, towing service dubai areas, emergency recovery dubai locations",
+
+
+    alternates: {
+    canonical: 'https://www.crystalrecoveryservice.com/areas',
+  },
+  
 }
 
 const canonicalUrl = 'https://www.crystalrecoveryservice.com/areas'
@@ -208,7 +214,7 @@ export default function AreasPage() {
                   
                   <div className="flex space-x-2">
                     <a
-                      href={`tel:+971563446682?context=${encodeURIComponent(`Emergency recovery in ${area.name}`)}`}
+                       href={`tel:+971563446682#${encodeURIComponent(area.name)}`}
                       className="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-xl text-center transition-all duration-300 text-sm"
                     >
                       Call for {area.name}

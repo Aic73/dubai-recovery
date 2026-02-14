@@ -6,6 +6,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 
+import { useRouter } from 'next/navigation'
+
+
+
 interface ServiceAreasSectionProps {
   areas?: string[]
   showMap?: boolean
@@ -41,6 +45,10 @@ export function ServiceAreasSection({ areas = defaultAreas, showMap = true }: Se
     }
   }
 
+
+  const router = useRouter()
+
+  
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -75,8 +83,12 @@ export function ServiceAreasSection({ areas = defaultAreas, showMap = true }: Se
                   key={index}
                   variants={itemVariants}
                 >
-                  <Link
-                    href={`/areas?location=${encodeURIComponent(area)}`}
+                  <div
+          onClick={() => {
+  window.location.href = `/areas?location=${encodeURIComponent(area)}`;
+}}
+                    
+
                     className="block p-3 md:p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all duration-300 border border-blue-200 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     aria-label={`View ${area} service area`}
                   >
@@ -86,7 +98,7 @@ export function ServiceAreasSection({ areas = defaultAreas, showMap = true }: Se
                         {area}
                       </span>
                     </div>
-                  </Link>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
