@@ -7,38 +7,10 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: 'https://www.crystalrecoveryservice.com',
   },
-
   
-  // FORCE static files to be served
-  async rewrites() {
+  async redirects() {
     return [
-      {
-        source: '/sitemap.xml',
-        destination: '/sitemap.xml',
-      },
-    ]
-  },
-  
-  async headers() {
-    return [
-      {
-        source: '/sitemap.xml',
-        headers: [
-          {
-            key: 'Content-Type',
-            value: 'application/xml',
-          },
-          {
-            key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate',
-          },
-        ],
-      },
-    ]
-  },
-
-    async redirects() {
-    return [
+      // Redirect non-www to www
       {
         source: '/:path*',
         has: [
@@ -50,11 +22,13 @@ const nextConfig = {
         destination: 'https://www.crystalrecoveryservice.com/:path*',
         permanent: true,
       },
+      // Redirect HTTP to HTTPS
       {
         source: '/:path*',
         has: [
           {
-            type: 'scheme',
+            type: 'header',
+            key: 'x-forwarded-proto',
             value: 'http',
           },
         ],
@@ -64,9 +38,28 @@ const nextConfig = {
     ]
   },
 
-
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'x-robots-tag',
+            value: 'index, follow',
+          },
+        ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
-
-
