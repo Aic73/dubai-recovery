@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { usePathname } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { 
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
   description: "24/7 car recovery service covering all Dubai areas: Downtown, Marina, Jumeirah, Deira, Bur Dubai, Palm Jumeirah & more. Fast response within 30 minutes.",
   keywords: "dubai areas covered, car recovery near me, towing service dubai areas, emergency recovery dubai locations",
 }
+
+const canonicalUrl = 'https://www.crystalrecoveryservice.com/areas'
 
 const dubaiAreas = [
   {
@@ -107,6 +110,11 @@ const emergencyServices = [
 export default function AreasPage() {
   return (
     <>
+   
+   <head>
+
+      <link rel="canonical" href={canonicalUrl} />
+   </head>
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}

@@ -1,0 +1,32 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "crystalrecoveryservice.com"
+        }
+      ],
+      "destination": "https://www.crystalrecoveryservice.com/:match",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crystalrecoveryservice.com"
+        },
+        {
+          "type": "scheme",
+          "value": "http"
+        }
+      ],
+      "destination": "https://www.crystalrecoveryservice.com/:match",
+      "permanent": true
+    }
+  ]
+}
+
+

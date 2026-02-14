@@ -3,6 +3,8 @@ import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '@/lib/seo'
 import { LoadingProvider } from '@/contexts/LoadingContext'
+import Canonical from '@/components/Canonical'
+
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -96,7 +98,7 @@ metadataBase: new URL('https://www.crystalrecoveryservice.com'),
 
   // Additional SEO enhancements
   alternates: {
-    canonical: siteConfig.url,
+    canonical: 'https://www.crystalrecoveryservice.com',
   },
   verification: {
     google: "19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI",
@@ -148,6 +150,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+                <Canonical />
 
 <meta name="google-site-verification" content="19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI" />        <script
           type="application/ld+json"

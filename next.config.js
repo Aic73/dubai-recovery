@@ -7,6 +7,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: 'https://www.crystalrecoveryservice.com',
   },
+
   
   // FORCE static files to be served
   async rewrites() {
@@ -35,6 +36,35 @@ const nextConfig = {
       },
     ]
   },
+
+    async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'crystalrecoveryservice.com',
+          },
+        ],
+        destination: 'https://www.crystalrecoveryservice.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'scheme',
+            value: 'http',
+          },
+        ],
+        destination: 'https://www.crystalrecoveryservice.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
+
+
 }
 
 module.exports = nextConfig
