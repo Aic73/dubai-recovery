@@ -150,7 +150,32 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+
+
+
+
+           {/* Google tag (gtag.js) - AW-17956088309 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17956088309"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17956088309');
+            `,
+          }}
+        />
+        
                 <Canonical />
+
+
+
+
+
 
 <meta name="google-site-verification" content="19uYlnktDUwXbfcPBWlUfTbzr4RFTciBZXKGQlvVqFI" />        <script
           type="application/ld+json"
