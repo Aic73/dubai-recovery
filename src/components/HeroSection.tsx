@@ -94,7 +94,7 @@ export default function HeroSection({
   }
 
   return (
-    <section 
+    <section
       className="relative min-h-screen w-full overflow-hidden"
       role="region"
       aria-label="Hero carousel"
@@ -139,12 +139,12 @@ export default function HeroSection({
                 className="text-white space-y-6 md:space-y-8"
               >
                 {/* Main Heading - Improved responsiveness */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight drop-shadow-xl shadow-black">
                   {slides[currentSlide].title}
                 </h1>
-                
+
                 {/* Description */}
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-red-400 md:text-red-500 font-semibold max-w-3xl mx-auto">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-red-400 md:text-red-500 font-semibold max-w-3xl mx-auto drop-shadow-lg shadow-black">
                   {slides[currentSlide].description}
                 </p>
 
@@ -184,9 +184,8 @@ export default function HeroSection({
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            } hover:bg-white/80`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white' : 'bg-white/50'
+              } hover:bg-white/80`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

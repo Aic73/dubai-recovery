@@ -40,7 +40,6 @@ metadataBase: new URL('https://www.crystalrecoveryservice.com'),
   icons: {
     icon: [
       { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
     ],
     apple: [
@@ -183,7 +182,6 @@ export default function RootLayout({
         />
         {/* Additional favicon links for better browser support */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
